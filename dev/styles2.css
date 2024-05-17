@@ -26,9 +26,14 @@ header {
   padding-bottom: 20px;
   margin-left: -60px;
   margin-right: -60px;
-
   margin-bottom: 80px; /* Add margin for separation from other elements */
+
+  position: -webkit-sticky; /* For Safari */
+  position: sticky; /* For modern browsers */
+  top: 0; /* Sticks the header at the top */
+  z-index: 1000; /* Ensures the header stays above other content */
 }
+
 
 h1 {
   margin: 0; /* Remove default margin for the h1 element */
