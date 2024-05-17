@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.plot.ly/plotly-2.31.1.js" charset="utf-8"></script>
+  </head>
+  <body>
+    <header>
+      <h1>Single Cell RNA Seq Visualizer</h1>
+    </header>
+    <main id="main">
+      <div id="splitbydiv">
+        <p id="splitbypara">Split by:</p>
+        <select id="splitbyselect"></select>
+      </div>
+      <div id="splitsdiv">
+        <p id="splitspara"></p>
+        <div id="input"></div>
+        <div id="splits"></div>
+      </div>
+      <div id="colorbydiv">
+        <p>Color By:</p>
+        <select id="colorbyselect"></select>
+      </div>
+      
+      
+     
+      <div id="buttonDiv">
+        <button id="renderButton" onclick="renderUMAPs()">
+          Render Cell UMAPs
+        </button>
+      </div>
+
+      <div id="geneSelectDiv" >
+        <label for="geneSelect">Select Gene:</label>
+        <select id="geneSelect"></select>
+      </div>
+
+      <div id="buttonDiv">
+        <button id="renderButton" onclick="render_gene_umaps()">
+          Render Gene Umaps
+        </button>
+      </div>
+
+      <div id="umaps"></div>
+      <div id="gene_umaps"></div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>

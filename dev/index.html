@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SCRNA</title>
+    <script src="https://cdn.plot.ly/plotly-2.31.1.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="styles2.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,300,0,-25"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&family=Montserrat:ital,wght@0,400;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+  
+   
+  </head>
+  <body>
+    <header>
+      <h1>Single Cell RNA Seq Visualizer</h1>
+    </header>
+    <main id="main">
+      <div id="splitbydiv">
+        <p id="splitbypara">Split by:</p>
+        <div id="selectdiv">
+          <select id="splitbyselect"></select>
+          <div class="custom-arrow-splitby"></div>
+          <span class="material-symbols-outlined" id="dropdown">
+            arrow_drop_down
+          </span>
+        </div>
+        <!-- <i class="fa-solid fa-caret-down"></i>
+
+            <i class="fa fa-car"></i> -->
+      </div>
+      <div id="splitsdiv">
+        <p id="splitspara"></p>
+        <div id="input"></div>
+        <div id="splits"></div>
+      </div>
+
+      <div id="colorbydiv">
+        <p>Color By:</p>
+        <div id="custom-div">
+          <select id="colorbyselect"></select>
+          <div class="custom-arrow-splitby"></div>
+          <span class="material-symbols-outlined" id="dropdown1">
+            arrow_drop_down
+          </span>
+        </div>
+      </div>
+      <div id="buttonDiv">
+        <button id="renderButton" onclick="renderUMAPs()">Render UMAPs</button>
+      </div>
+
+      <div class="tab">
+        <button class="tablinks active" onclick="openTab(event, 'Cell')">
+          Cell
+        </button>
+        <button class="tablinks" onclick="openTab(event, 'Gene')">Gene</button>
+      </div>
+
+      <div id="Cell" class="tabcontent" style="display: block">
+        <div class="one">
+          <div id="umaps"></div>
+        </div>
+      </div>
+
+      <div id="Gene" class="tabcontent">
+        <div class="two">
+          <div id="colorbydiv">
+            <p>Select Gene:</p>
+            <div id="custom-div">
+              <select id="geneSelect"></select>
+              <div class="custom-arrow-splitby"></div>
+              <span class="material-symbols-outlined" id="dropdown1">
+                arrow_drop_down
+              </span>
+            </div>
+          </div>
+          <div id="buttonDiv" class="left">
+            <button
+              id="renderButton"
+              
+              onclick="render_gene_umaps()"
+            >
+              Search
+            </button>
+          </div>
+
+          <div id="gene_umaps"></div>
+        </div>
+      </div>
+      <!-- <div id="gd"></div> -->
+    </main>
+
+    <script src="script1.js"></script>
+  </body>
+</html>

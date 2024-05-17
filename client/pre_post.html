@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>plotly</title>
+    <script src="https://cdn.plot.ly/plotly-2.31.1.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        #graphs {
+            display: flex;
+            justify-content: space-evenly;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="pre_post.html">Pre vs Post</a></li>
+        <li><a href="box_plot.html">Box Plot</a></li>
+        <li><a href="volcano.html">Volcano Plot</a></li>
+    </header>
+    <div id="graphs">
+        <div id="pre"></div>
+        <div id="post"></div>
+    </div>
+    <script src="js/pre_post.js"></script>
+</body>
+</html>
